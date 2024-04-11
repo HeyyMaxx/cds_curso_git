@@ -1,4 +1,5 @@
 import streamlit as st
+import src.answers as asw
 from src.extraction import load_data
 
 st.set_page_config(layout="wide")
@@ -7,21 +8,13 @@ def create_answers_section(df):
     st.title("Main questions Answers")
 
     st.header("First Round")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     st.subheader("How many bikes are being sold by their owners and how many bikes are being sold by distributors?")
-=======
-    st.subheader("How manyu bikes are being sold by their owners and how many bikes are being sold by distributors?")
->>>>>>> 9da8943 (Created function to keep the answers section to the CEO questions.)
-=======
-    st.subheader("How many bikes are being sold by their owners and how many bikes are being sold by distributors?")
->>>>>>> 5fadb99 (Created function to keep the answers section to the CEO questions.)
-=======
-    st.subheader("How manyu bikes are being sold by their owners and how many bikes are being sold by distributors?")
->>>>>>> 9da8943 (Created function to keep the answers section to the CEO questions.)
 
-    st.subheader("How manby bikes being sold are bikes from a unique owner?")
+    st.subheader("How many bikes are being sold by their owners and how many bikes are being sold by distributors?")
+
+    st.subheader("How many bikes are being sold by their owners and how many bikes are being sold by distributors?")
+
+    st.subheader("How many bikes being sold are bikes from a unique owner?")
 
     st.subheader("Are high kilometer bikes more expensive than bikes with lower kilometer counts?")
 
@@ -73,11 +66,15 @@ def create_dataframe_section(df):
 
 
 def main():
-    df_raw = load_data()
+    df = load_data()
 
-    create_dataframe_section(df_raw)
+    create_dataframe_section(df)
 
-    st.dataframe(df_raw)
+    create_answers_section(df)
+
+    st.dataframe(df)
+
+    return None
 
 if __name__ == '__main__':
     main()
