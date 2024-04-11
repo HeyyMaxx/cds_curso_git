@@ -3,6 +3,43 @@ from src.extraction import load_data
 
 st.set_page_config(layout="wide")
 
+def create_answers_section(df):
+    st.title("Main questions Answers")
+
+    st.header("First Round")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    st.subheader("How many bikes are being sold by their owners and how many bikes are being sold by distributors?")
+=======
+    st.subheader("How manyu bikes are being sold by their owners and how many bikes are being sold by distributors?")
+>>>>>>> 9da8943 (Created function to keep the answers section to the CEO questions.)
+=======
+    st.subheader("How many bikes are being sold by their owners and how many bikes are being sold by distributors?")
+>>>>>>> 5fadb99 (Created function to keep the answers section to the CEO questions.)
+=======
+    st.subheader("How manyu bikes are being sold by their owners and how many bikes are being sold by distributors?")
+>>>>>>> 9da8943 (Created function to keep the answers section to the CEO questions.)
+
+    st.subheader("How manby bikes being sold are bikes from a unique owner?")
+
+    st.subheader("Are high kilometer bikes more expensive than bikes with lower kilometer counts?")
+
+    st.subheader("Are the bikes with a unique owner more expensive on average than the other bikes?")
+
+    st.subheader("Are the bikes that have had more owners also the bikes with more kilometers traveled on average?")
+
+    st.subheader("Which company has the most bikes registered?")
+
+    st.subheader("Which company has the most expensive bikes on average?")
+
+    st.subheader("Is the company that has the most expensive bikes registered also the company that has the most bikes registered?")
+
+    st.subheader("Which bikes are good purchase choices?")
+
+    return None
+ 
+
 def create_dataframe_section(df):
     st.title("Database Section")
 
