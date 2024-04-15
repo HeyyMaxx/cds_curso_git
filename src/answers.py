@@ -53,7 +53,7 @@ def rd1_question_13(df):
 
 
 def rd1_question_14(df):
-    st.text("As we can see, bikes with high kilometer have cheapier prices")
+    st.text("As we can see, bikes with higher kilometer-traveled counts are cheaper")
 
     fig = px.scatter(
         df,
@@ -85,7 +85,7 @@ def rd2_question_1(df):
         df_grouped,
         x="owner",
         y="avg_price",
-        labels={"owner": "Owner Types", "avg_price": "Avarage Price"},
+        labels={"owner": "Owner Types", "avg_price": "Average Price"},
         text="avg_price",
         color="owner",
     )
@@ -108,7 +108,7 @@ def rd2_question_2(df):
         df_grouped,
         x="owner",
         y="km_driven",
-        labels={"owner": "Owner Types", "km_driven": "Avarage Price"},
+        labels={"owner": "Owner Types", "km_driven": "Average Price"},
         text="km_driven",
         color="owner",
     )
@@ -131,7 +131,7 @@ def rd2_question_3(df):
         df_grouped,
         x="owner",
         y="age",
-        labels={"owner": "Owner Types", "age": "Avarage Price"},
+        labels={"owner": "Owner Types", "age": "Average Price"},
         text="age",
         color="owner",
     )
@@ -184,10 +184,10 @@ def rd3_question_2(df):
         df_grouped,
         x="company",
         y="avg_price",
-        labels={"company": "Companies", "avg_price": "Avarege Price"},
+        labels={"company": "Companies", "avg_price": "Average Price"},
         text="avg_price",
         color="company",
-        title="Company Avarege Price",
+        title="Company Average Price",
     )
 
     fig.update_traces(texttemplate="$ %{text:.2f}", textposition="outside")
@@ -250,9 +250,9 @@ def rd3_question_7(df):
     df_xlsx = to_excel(df_selected)
 
     st.download_button(
-        label="📥 Download Buyinbg Suggestions",
+        label="📥 Download Purchase Suggestions",
         data=df_xlsx,
-        file_name="buing_suggestions.xlsx",
+        file_name="purchase_suggestions.xlsx",
     )
 
     return None
